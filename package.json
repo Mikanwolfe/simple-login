@@ -1,0 +1,19 @@
+{
+  "name": "simple-login",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server . -p 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "Lightweight login page for embedded systems",
+  "dependencies": {
+    "alpinejs": "^3.13.0",
+    "crypto-js": "^4.1.1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

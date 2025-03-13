@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Alpine.js from CDN for lightweight implementation -->
+  <script src="https://unpkg.com/alpinejs@3.13.0/dist/cdn.min.js" defer></script>
+  <!-- CryptoJS from CDN for password hashing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="js/login.js" defer></script>
+</head>
+<body>
+  <div class="container" x-data="loginForm">
+    <div class="login-box">
+      <div class="logo">
+        <img src="https://via.placeholder.com/150" alt="Logo" id="logo">
+      </div>
+      <form @submit.prevent="submitForm">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input 
+            type="text" 
+            id="username" 
+            x-model="username" 
+            required 
+            autocomplete="username">
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input 
+            type="password" 
+            id="password" 
+            x-model="password" 
+            required 
+            autocomplete="current-password">
+        </div>
+        <div class="error-message" x-show="errorMessage" x-text="errorMessage"></div>
+        <button type="submit" class="login-button">Login</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
